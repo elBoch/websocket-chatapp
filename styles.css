@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+* {
+    font-family: 'Zen Kurenaido', sans-serif;
+    /* color: #97A7C8; */
+    color: #afb5c2;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background-color: #1c2230;
+    background-color: #1e2531;
+    height: 100%;
+    width: 100%;
+}
+/* .buttons {
+    font-size: 4em;
+    display: flex;
+    justify-content: center;
+}
+.button, .value {
+    line-height: 1;
+    padding: 2rem;
+    margin: 2rem;
+    border: medium solid;
+    min-height: 1em;
+    min-width: 1em;
+}
+.button {
+    cursor: pointer;
+    user-select: none;
+}
+.minus {
+    color: red;
+}
+.plus {
+    color: green;
+}
+.value {
+    min-width: 2em;
+    background-color: #262D3E;
+}
+.state {
+    font-size: 2em;
+} */
+
+.main {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    background-color: #212836;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.chat {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    max-height: 100%;
+}
+
+.message {
+    width: 98%;
+    padding: .3% 1%;
+}
+
+.message:hover{
+    background-color: #262D3E;
+}
+
+.input {
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    width: 98%;
+    margin: auto;
+    background: transparent;
+    font-size: 1.4rem;
+    border-style: none;
+    outline: none;
+
+}
+
+
+.info {
+    text-align: center;
+}
