@@ -13,36 +13,6 @@ html, body {
     height: 100%;
     width: 100%;
 }
-/* .buttons {
-    font-size: 4em;
-    display: flex;
-    justify-content: center;
-}
-.button, .value {
-    line-height: 1;
-    padding: 2rem;
-    margin: 2rem;
-    border: medium solid;
-    min-height: 1em;
-    min-width: 1em;
-}
-.button {
-    cursor: pointer;
-    user-select: none;
-}
-.minus {
-    color: red;
-}
-.plus {
-    color: green;
-}
-.value {
-    min-width: 2em;
-    background-color: #262D3E;
-}
-.state {
-    font-size: 2em;
-} */
 
 .main {
     width: 80%;
@@ -61,7 +31,7 @@ html, body {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    overflow-y: auto;
     max-height: 100%;
 }
 
@@ -94,4 +64,18 @@ input {
 
 .info {
     text-align: center;
+}
+
+*::-webkit-scrollbar {
+    width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgba(155, 155, 155, .5);
+    border-radius: 20px;
+    border: transparent;
 }
