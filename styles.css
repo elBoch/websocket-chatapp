@@ -8,10 +8,10 @@
 }
 
 html, body {
-    background-color: #1c2230;
     background-color: #1e2531;
     height: 100%;
     width: 100%;
+    user-select: none;
 }
 
 .main {
@@ -40,25 +40,43 @@ html, body {
     padding: .3% 1%;
 }
 
-.message:hover{
+.message:hover, button:hover {
     background-color: #262D3E;
 }
 
+.right {
+    text-align: right;
+}
+
 .input {
-    padding: 15px;
-    width: 100%;
     display: flex;
-    justify-content: center;
+    width: 100%;
+}
+
+.input-container {
+    padding-left: 1%;
+    flex-grow: 1;
+}
+
+button {
+    width: 10%;
+    aspect-ratio: 4/1;
+    font-size: 1.2rem;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #212836;
 }
 
 input {
-    width: 98%;
+    width: 100%;
     margin: auto;
     background: transparent;
     font-size: 1.4rem;
     border-style: none;
     outline: none;
-
 }
 
 
