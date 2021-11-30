@@ -7,8 +7,8 @@ logging.basicConfig()
 
 USERS = set()
 
-def message_event(sender, message):
-    return json.dumps({"type": "message", "sender": sender, "message": message})
+def message_event(uuid, sender, message):
+    return json.dumps({"type": "message", "uuid": uuid, "sender": sender, "message": message})
 
 def info_event(message):
     return json.dumps({"type": "info", "message": message})
@@ -21,13 +21,13 @@ async def chat(websocket, path):
         # Register user
         USERS.add(websocket)
 
-        # Send current state to user
+        # Send current state to user (first time only)
         await websocket.send(info_event("Hello, please be friendly :)"))
 
         # Manage state changes
         async for message in websocket:
             data = json.loads(message)
-            websockets.broadcast(USERS, message_event("Someone", "Something"))
+            websockets.broadcast(USERS, message_event(data['uuid'], data['sender'], data['message']))
 
 
     finally:

@@ -12,15 +12,22 @@
             
             <div class="input">
                 <div class="input-container">
-                    <input type="text" placeholder="Type here..."/>
+                    <input type="text" id="input" placeholder="Type here..."/>
                 </div>
+                <button class="name">Change Name</button>
                 <button class="send">Send</button>
             </div>
         </div>
 
         <template id="template-message">
             <div class="message">
-                <p class="message-name">Hello</p>
+                <p class="message-name"></p>
+                <h2 class="message-text"></h2>
+            </div>
+        </template>
+        <template id="template-message-you">
+            <div class="message-right">
+                <p class="message-name">You</p>
                 <h2 class="message-text"></h2>
             </div>
         </template>
